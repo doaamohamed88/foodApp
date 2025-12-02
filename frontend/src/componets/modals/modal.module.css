@@ -1,0 +1,211 @@
+/* ===========================
+   MODAL OVERLAY
+=========================== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fade-in 0.25s ease-out forwards;
+}
+
+/* ===========================
+   MODAL BOX
+=========================== */
+.modal {
+  background-color: #e4ddd4;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 40rem;
+  color: #2c2306;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: fade-slide-up 0.3s ease-out forwards;
+  position: relative;
+}
+
+/* Modal Title */
+.modaltitle {
+  color: #d8a706;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+.form label {
+  font-weight: bold;
+  color: #2c2306;
+}
+
+.form input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #c7b89d;
+  background: #faf7f3;
+  font-size: 1rem;
+  color: #2c2306;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form input:focus {
+  border-color: #ffbf00;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.row div{
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  margin-top: .5rem;
+  font-size: 0.9rem;
+  color: #e63946;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  background: #f4efe6;
+  padding: 0 1rem;
+  border-radius: 10px;
+}
+
+.itemInfo {
+  font-weight: 600;
+  color: #2c2306;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.counter button {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #d6cbb5;
+  cursor: pointer;
+}
+
+.counter button:hover {
+  background: #ffe9b3;
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c2306;
+  margin-bottom: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+/* ===========================
+   BUTTON BASE
+=========================== */
+.submitBtn,
+.closeBtn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+/* ===========================
+   SUBMIT BUTTON
+=========================== */
+.submitBtn {
+  background: #ffbf00;
+  color: #2c2306;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.submitBtn:hover {
+  background: #ffcc33;
+}
+
+.submitBtn:active {
+  background: #e6a800;
+}
+
+/* Disabled state */
+.submitBtn:disabled {
+  background: #c8b88a;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+.closeBtn {
+  background: #e4ddd4;
+  color: #2c2306;
+  border: 1px solid #c7b89d;
+}
+
+.closeBtn:hover {
+  background: #f2ede7;
+}
+
+.closeBtn:active {
+  background: #d4ccc1;
+}

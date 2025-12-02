@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+}
+.header div h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ffc404;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.header div img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #ffc404;
+  margin-right: 10px;
+}
+.header button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  background-color: #ffc404;
+}
